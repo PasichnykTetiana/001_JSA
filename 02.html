@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задание 2 Разработайте функцию-конструктор, которая будет создавать объект Human (человек). Создайте массив объектов
+    //и реализуйте функцию, которая будет сортировать элементы массива по значению свойства Age по возрастанию или по убыванию.
+    function Human(Age){
+      this.Age=Age;
+      this.Older = function(){
+        Age.sort((a,b)=>b-a);
+        document.write("Возраст по убыванию: ", Age);
+        document.write("<br>");
+      };
+      this.Younger = function(){
+        Age.sort((a,b)=>a-b);
+        document.write("Возраст по возрастанию: ", Age);
+      }
+      }
+    let age,
+    a=[],
+    i;
+
+    do {
+
+    age=prompt("Возраст?", 0);
+    if (age!==null){
+        a.push(Number(age))
+    }
+    }
+    while (age!=null);
+
+    let e = new Human(a);
+    e.Older();
+    e.Younger();
+</script>
+</body>
+</html>

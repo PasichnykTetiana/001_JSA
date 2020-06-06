@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Задание 1 Создайте функцию конструктор, которая создает объект со свойством экземпляра, свойством функцииконструктора,
+    // с методом экземпляра и методом функции-конструктора. Имена выберите произвольно.
+    function Point(x, y){
+      this.x=x;
+      this.y=y;
+
+      this.Speak = function() {
+          let m=0;
+        m=this.x + this.y;
+          alert(m);
+      }
+    }
+    let f = new Point(7, 90);
+    f.Speak();
+    Point.NewO = function(){
+        return new Point(5,8)
+    }; // метод функции-консттр
+    Point.NewO().Speak();
+
+</script>
+</body>
+</html>
